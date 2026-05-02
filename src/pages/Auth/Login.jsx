@@ -7,23 +7,30 @@ function Login() {
   const [password, setPassword] = useState('')
 
   const handleSubmit = e => {
+    e.preventDefault()
     // Implement logic to print it on console and success on alert
+    console.log('email', email)
+    console.log('password', password)
+    alert('Success')
   };
 
   return (
     <div className="auth-container">
       <div className="auth-box">
         <h2>Login</h2>
-        <input
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          placeholder='Email'
-        />
-        <input
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-          placeholder='Password'
-        />
+        <form onSubmit={handleSubmit}>
+          <input
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            placeholder='Email'
+          />
+          <input
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            placeholder='Password'
+          />
+          <button>Submit</button>
+        </form>
       </div>
     </div>
   );
