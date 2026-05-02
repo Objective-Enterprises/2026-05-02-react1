@@ -5,6 +5,7 @@ function Register() {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
 
   const handleChange = e => {
+    // form[e.target.name] = e.target.value
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
