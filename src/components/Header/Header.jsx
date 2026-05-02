@@ -8,7 +8,16 @@ function Header({ onNavigate }) {
 
   const buttons = isAuthenticated
     ? <button>Logout</button>
-    : <><button>Register</button><button>Login</button></>
+    : (
+      <>
+        <button onClick={() => onNavigate('register')}>
+          Register
+        </button>
+        <button onClick={() => onNavigate('login')}>
+          Login
+        </button>
+      </>
+    )
 
   return (
     <header className="header">

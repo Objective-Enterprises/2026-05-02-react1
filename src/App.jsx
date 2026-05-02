@@ -9,7 +9,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState('register');
   return (
     <div className="app-layout">
-      <Header />
+      <Header onNavigate={setCurrentPage} />
       {currentPage === 'register' ? <Register /> : <Login />}
       <Footer />
     </div>
