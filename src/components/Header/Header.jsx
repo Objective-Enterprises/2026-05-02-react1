@@ -6,9 +6,16 @@ function Header({ onNavigate }) {
    // Dummy authentication variable. Will be eventually replaced with actual authentication logic.
    // Todo: define respective functions
 
+  const buttons = isAuthenticated
+    ? <button>Logout</button>
+    : <><button>Register</button><button>Login</button></>
+
   return (
     <header className="header">
-      {/* Todo: Header Component */}
+      <h1 className="title">Threadhive</h1>
+      <div className="header-right">
+        {buttons}
+      </div>
     </header>
   );
 }
