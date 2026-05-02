@@ -16,6 +16,9 @@ function Header({ onNavigate }) {
         <button onClick={() => onNavigate('login')}>
           Login
         </button>
+        <button onClick={() => onNavigate('reset-password')}>
+          Reset Password
+        </button>
       </>
     )
 
